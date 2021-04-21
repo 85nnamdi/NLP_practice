@@ -1,8 +1,8 @@
-from transformers import GPT2Tokenizer, GPT2Model
+from transformers import GPT2LMHeadModel, GPT2Tokenizer
 
 #load model
-tokenizer = GPT2Tokenizer.from_pretrained('gpt2-medium')
-model = GPT2Model.from_pretrained('gpt2-medium',pad_token_id=tokenizer.eos_token_id)
+tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
+model = GPT2LMHeadModel.from_pretrained('gpt2',pad_token_id=tokenizer.eos_token_id)
 
 #tokenization step
 sentence = "Aristole was a great philosopher!"
